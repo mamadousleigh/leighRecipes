@@ -10,6 +10,8 @@ const Header = ({ onSearch }) => {
     e.preventDefault();
     console.log(search);
     onSearch(search);
+
+    setSearch("");
   };
   return (
     <div className="flex flex-col items-center gap-3 p-3 text-white bg-blue-500 w-full capitalize sm:flex-row sm:justify-between sm:px-6 md:px-10 md:py-4 lg:px-16 lg:py-5  ">

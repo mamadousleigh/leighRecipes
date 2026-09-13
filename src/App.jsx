@@ -42,6 +42,23 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    const GetRecipesDefualt = async () => {
+      try {
+        const response = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/search.php?s=chicken`,
+        );
+        const data = await response.json();
+        setRecipes(data.meals || []);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    if (recipes.length === 0) {
+      GetRecipesDefualt();
+    }
+  }, []);
+
   return (
     <div className="flex flex-col w-full bg-gray-200">
       <Header onSearch={handleRecipes} />
