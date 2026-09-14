@@ -4,7 +4,7 @@ const Recipes = ({ recipes, onViewRecipes, selectRecipe }) => {
   return (
     <div>
       {selectRecipe ? (
-        <div className="max-w-2xl mx-auto mt-10 mb-10 bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="max-w-2xl mx-auto mt-10 mb-10 bg-white rounded-2xl shadow-xl overflow-hidden px-5 py-7">
           <img
             src={selectRecipe.strMealThumb}
             alt={selectRecipe.strMeal}
